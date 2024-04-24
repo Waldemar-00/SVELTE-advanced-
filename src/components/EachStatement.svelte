@@ -1,9 +1,10 @@
 <script>
 	// @ts-nocheck
-
+	import { createEventDispatcher } from 'svelte';
 	export let persons = [];
 	let number = 0;
 	let value = '';
+	const dispatch = createEventDispatcher();
 	function addPersonHandler() {
 		persons = [...persons, { name: value, age: number, id: Math.random().toFixed(4) }];
 	}
@@ -14,12 +15,15 @@
 	function deleteFirstPersonHandler() {
 		persons = persons.slice(1);
 	}
+	function createEventHandler() {
+		dispatch('mymsg', { message: 'Added a new Person!', name: value, age: number });
+	}
 </script>
 
-<form on:submit={addPersonHandler}>
+<form on:submit|preventDefault={addPersonHandler}>
 	<input type="text" bind:value placeholder="name" />
 	<input type="number" bind:value={number} />
-	<button>Add person</button>
+	<button on:click={createEventHandler}>Add person</button>
 </form>
 <button on:click={deleteLastPersonHandler}>Remove last person</button>
 <button on:click={deleteFirstPersonHandler}>Remove first person</button>
@@ -43,7 +47,11 @@
 		border-bottom: 2px solid grey;
 		width: fit-content;
 	}
+	ul:last-child {
+		margin-bottom: 2rem;
+	}
 	.denied {
 		color: red;
+		margin-bottom: 2rem;
 	}
 </style>

@@ -1,6 +1,6 @@
 <script>
 	// @ts-nocheck
-
+	import Wrapper from './Wrapper.svelte';
 	let value = '';
 	$: error = isValid(value);
 	function isValid(value) {
@@ -8,6 +8,7 @@
 	}
 </script>
 
+<Wrapper>You can't see this words!</Wrapper>
 <h1>If statement</h1>
 <hr />
 <div>

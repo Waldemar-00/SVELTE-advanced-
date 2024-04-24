@@ -5,8 +5,9 @@
 	// import Position from '../components/Position.svelte';
 	// import Form from '../components/Form.svelte';
 	// import InputBind from '../components/InputBind.svelte';
-	import IfStatement from '../components/IfStatement.svelte';
+	// import IfStatement from '../components/IfStatement.svelte';
 	import EachStatement from '../components/EachStatement.svelte';
+	import Calculator from '../components/Calculator.svelte';
 	let persons = [
 		{ name: 'John', age: 17, id: 177 },
 		{ name: 'Laura', age: 21, id: 387 },
@@ -19,5 +20,12 @@
 <Position />
 <Form />
 <InputBind /> -->
-<IfStatement />
-<EachStatement {persons} />
+<!-- <IfStatement /> -->
+<EachStatement
+	{persons}
+	on:mymsg={(e) => {
+		console.log(e.detail);
+		alert(`${e.detail.message} Name: ${e.detail.name}. Age: ${e.detail.age}`);
+	}}
+/>
+<Calculator />
