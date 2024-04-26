@@ -3,7 +3,7 @@
 	let agree = false;
 	let text = 'Lorem ipsum';
 	let option = '3';
-	let sex = 'male';
+	let sex = 'Male';
 </script>
 
 <h2>{name}</h2>
