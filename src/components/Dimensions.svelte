@@ -10,12 +10,13 @@
 <input type="text" bind:value={text} />
 
 <div bind:clientHeight={h} bind:clientWidth={w}>
-	<span style="font-size:{size}px">{text}</span>
+	<span style="font-size:{size}px; color: {text}">{text}</span>
 </div>
 
 <style>
 	div {
 		display: inline-block;
+		color: #666;
 	}
 	input {
 		display: block;

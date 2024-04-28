@@ -13,6 +13,12 @@
 	// import Todos from '../components/Todos.svelte';
 	// import Video from '../components/Video.svelte';
 	import Dimensions from '../components/Dimensions.svelte';
+	import Keyboard from '../components/Keyboard.svelte';
+
+	let password = '*********';
+	function getPassword(e) {
+		password = e.detail.pin;
+	}
 	// import { counter } from '$lib/index';
 	// import { object } from '$lib/index';
 	// let persons = [
@@ -48,3 +54,5 @@
 <!-- <Todos /> -->
 <!-- <Video /> -->
 <Dimensions />
+<Keyboard on:sbm={getPassword} />
+<h2>{password}</h2>
