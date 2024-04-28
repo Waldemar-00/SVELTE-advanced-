@@ -11,7 +11,8 @@
 	// import FileUploader from '../components/FileUpload.svelte';
 	// import Select from '../components/Select.svelte';
 	// import Todos from '../components/Todos.svelte';
-	import Video from '../components/Video.svelte';
+	// import Video from '../components/Video.svelte';
+	import Dimensions from '../components/Dimensions.svelte';
 	// import { counter } from '$lib/index';
 	// import { object } from '$lib/index';
 	// let persons = [
@@ -45,4 +46,5 @@
 <!-- <FileUploader />
 <Select /> -->
 <!-- <Todos /> -->
-<Video />
+<!-- <Video /> -->
+<Dimensions />
