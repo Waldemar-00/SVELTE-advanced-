@@ -12,13 +12,15 @@
 	// import Select from '../components/Select.svelte';
 	// import Todos from '../components/Todos.svelte';
 	// import Video from '../components/Video.svelte';
-	import Dimensions from '../components/Dimensions.svelte';
-	import Keyboard from '../components/Keyboard.svelte';
 
-	let password = '*********';
-	function getPassword(e) {
-		password = e.detail.pin;
-	}
+	// import Dimensions from '../components/Dimensions.svelte';
+	// import Keyboard from '../components/Keyboard.svelte';
+
+	// let password = '*********';
+	// function getPassword(e) {
+	// 	password = e.detail.pin;
+	// }
+
 	// import { counter } from '$lib/index';
 	// import { object } from '$lib/index';
 	// let persons = [
@@ -30,6 +32,7 @@
 	// const unsubscribe = counter.subscribe((value) => {
 	// 	count = value;
 	// });
+	import OnMount from '../components/OnMount.svelte';
 </script>
 
 <h1>Advanced Svelte!</h1>
@@ -53,6 +56,7 @@
 <Select /> -->
 <!-- <Todos /> -->
 <!-- <Video /> -->
-<Dimensions />
+<!-- <Dimensions />
 <Keyboard on:sbm={getPassword} />
-<h2>{password}</h2>
+<h2>{password}</h2> -->
+<OnMount />
