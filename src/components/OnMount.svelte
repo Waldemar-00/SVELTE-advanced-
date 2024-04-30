@@ -3,11 +3,11 @@
 
 	import { onMount } from 'svelte';
 	import axios from 'axios';
-	let photos = [];
-	onMount(async () => {
-		const respone = await axios.get('https://jsonplaceholder.typicode.com/photos');
-		photos = respone.data;
-	});
+	let photos = getPhotos();
+	async function getPhotos() {
+		return (await axios.get('https://jsonplaceholder.typicode.com/photos')).data;
+	}
+	onMount(() => alert('We are getting fotos for You!'));
 </script>
 
 <h2>onMount</h2>
