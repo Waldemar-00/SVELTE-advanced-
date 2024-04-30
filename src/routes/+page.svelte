@@ -32,7 +32,9 @@
 	// const unsubscribe = counter.subscribe((value) => {
 	// 	count = value;
 	// });
-	import OnMount from '../components/OnMount.svelte';
+	// import OnMount from '../components/OnMount.svelte';
+	// import OnDestroy from '../components/OnDestroy.svelte';
+	import ElizaBot from '../components/ElizaBot.svelte';
 </script>
 
 <h1>Advanced Svelte!</h1>
@@ -59,4 +61,7 @@
 <!-- <Dimensions />
 <Keyboard on:sbm={getPassword} />
 <h2>{password}</h2> -->
-<OnMount />
+<!-- <OnMount /> -->
+<!-- <OnDestroy /> -->
+
+<ElizaBot />
