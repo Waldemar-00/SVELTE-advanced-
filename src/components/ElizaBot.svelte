@@ -1,21 +1,22 @@
 <script>
 	// @ts-nocheck
 
-	const Eliza = require('elizabot');
+	import Eliza from 'elizabot';
 	import { beforeUpdate, afterUpdate } from 'svelte';
-	const eliza = new Eliza();
-	let comments = [{ author: 'aliza', text: aliza.getInitial() }];
 	let div;
 	let autoscroll;
+
 	beforeUpdate(() => {
-		autoscroll = div.offsetHeight + div.scrollTop > div.scrollHeight - 20;
+		autoscroll = div && div.offsetHeight + div.scrollTop > div.scrollHeight - 20;
 	});
 	afterUpdate(() => {
 		if (autoscroll) div.scrollTo(0, div.scrollHeight);
 	});
+	const eliza = new Eliza();
+	let comments = [{ author: 'eliza', text: eliza.getInitial() }];
 	function handelKeydown(e) {
-		if (e.target.key === 'Enter' && e.target.value) {
-			const text = e.target.value;
+		const text = e.target.value;
+		if (e.key === 'Enter' && text) {
 			comments = comments.concat({ author: 'user', text });
 			e.target.value = '';
 			const reply = eliza.transform(text);
@@ -26,7 +27,7 @@
 						() => {
 							comments = comments
 								.filter((comment) => !comment.placeholder)
-								.concat({ author: 'aliza', text: reply });
+								.concat({ author: 'eliza', text: reply });
 						},
 						500 + Math.random() * 500
 					);
@@ -53,10 +54,35 @@
 	.chat {
 		display: flex;
 		flex-direction: column;
-		max-width: 700px;
-		height: 100vh;
+		width: 35vw;
+		height: 70vh;
 		justify-content: space-between;
 	}
-	/* .scroll {
-	} */
+	.scroll {
+		flex-grow: 1 1 auto;
+		border-top: 1px solid #acacac;
+		overflow-y: auto;
+		height: 40vh;
+	}
+	article {
+		box-sizing: border-box;
+		margin: 1.5rem 1rem;
+	}
+	.user {
+		text-align: right;
+	}
+	span {
+		padding: 0.5rem 1.2rem;
+		color: black;
+	}
+	.eliza span {
+		background-color: rgb(240, 240, 240);
+		border-radius: 1rem 1rem 1rem 0;
+		font-style: italic;
+	}
+	.user span {
+		background-color: rgb(110, 110, 253);
+		color: #fff;
+		border-radius: 1rem 1rem 0 1rem;
+	}
 </style>
