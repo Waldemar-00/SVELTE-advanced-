@@ -34,7 +34,8 @@
 	// });
 	// import OnMount from '../components/OnMount.svelte';
 	// import OnDestroy from '../components/OnDestroy.svelte';
-	import ElizaBot from '../components/ElizaBot.svelte';
+	// import ElizaBot from '../components/ElizaBot.svelte';
+	import Tick from '../components/Tick.svelte';
 </script>
 
 <h1>Advanced Svelte!</h1>
@@ -63,5 +64,5 @@
 <h2>{password}</h2> -->
 <!-- <OnMount /> -->
 <!-- <OnDestroy /> -->
-
-<ElizaBot />
+<!-- <ElizaBot /> -->
+<Tick />
