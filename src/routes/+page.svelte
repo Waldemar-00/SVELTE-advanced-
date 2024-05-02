@@ -18,6 +18,8 @@
 
 	// let password = '*********';
 	// function getPassword(e) {
+	// 	console.log(e);
+
 	// 	password = e.detail.pin;
 	// }
 
@@ -35,7 +37,8 @@
 	// import OnMount from '../components/OnMount.svelte';
 	// import OnDestroy from '../components/OnDestroy.svelte';
 	// import ElizaBot from '../components/ElizaBot.svelte';
-	import Tick_2 from '../components/Tick_2.svelte';
+	// import Tick_2 from '../components/Tick_2.svelte';
+	import Counter from '../components/withStore/Counter.svelte';
 </script>
 
 <h1>Advanced Svelte!</h1>
@@ -59,10 +62,11 @@
 <Select /> -->
 <!-- <Todos /> -->
 <!-- <Video /> -->
-<!-- <Dimensions />
-<Keyboard on:sbm={getPassword} />
+<!-- <Dimensions /> -->
+<!-- <Keyboard on:sbm={getPassword} />
 <h2>{password}</h2> -->
 <!-- <OnMount /> -->
 <!-- <OnDestroy /> -->
 <!-- <ElizaBot /> -->
-<Tick_2 />
+<!-- <Tick_2 /> -->
+<Counter />
