@@ -1,6 +1,7 @@
 // @ts-nocheck
-import { writable, readable } from 'svelte/store'
+import { writable, readable, derived} from 'svelte/store'
 export const counter = writable( 10 );
+export const number = writable( 4 );
 export const time = readable(new Date(), function start( set ) {
   const interval = setInterval(() => {
     set( new Date() )
@@ -9,5 +10,6 @@ export const time = readable(new Date(), function start( set ) {
     clearInterval( interval );
   }
 } );
+export const someData = readable( 'SomeData' );
 
-export const someData = readable('SomeData')
+export const derivedStore = derived( [ counter, number ], ([ $counter, $number]) => $counter * $number)
