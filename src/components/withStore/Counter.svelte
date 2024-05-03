@@ -8,6 +8,7 @@
 	import { counter } from '$lib/store';
 	import { number } from '$lib/store';
 	import { derivedStore } from '$lib/store';
+	import { customStore } from '$lib/store';
 	$: {
 		console.log(derivedStore);
 	}
@@ -25,3 +26,8 @@
 <Increment />
 <Decrement />
 <Reset />
+
+<h1>{$customStore}</h1>
+<button on:click={customStore.increment}>Increment</button>
+<button on:click={customStore.decrement}>Decrement</button>
+<button on:click={customStore.reset}>Reset</button>
