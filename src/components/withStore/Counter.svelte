@@ -21,7 +21,12 @@
 
 {@debug changedCounter, number, derivedStore}
 <!-- <h1>{$counter}</h1> -->
-<h3>{changedCounter}</h3>
+{#if changedCounter > 40}
+	{@const newCounter = changedCounter * 4}
+	<h3>{newCounter}</h3>
+{:else}
+	<h3>{changedCounter}</h3>
+{/if}
 <h3>{$number}</h3>
 <h2>{$derivedStore}</h2>
 <Increment />
