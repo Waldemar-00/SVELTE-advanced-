@@ -19,6 +19,7 @@
 	onDestroy(unsubscribe);
 </script>
 
+{@debug changedCounter, number, derivedStore}
 <!-- <h1>{$counter}</h1> -->
 <h3>{changedCounter}</h3>
 <h3>{$number}</h3>
