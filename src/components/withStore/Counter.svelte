@@ -27,7 +27,23 @@
 <Decrement />
 <Reset />
 
-<h1>{$customStore}</h1>
+{#key $customStore}
+	<h1>{$customStore}</h1>
+{/key}
 <button on:click={customStore.increment}>Increment</button>
 <button on:click={customStore.decrement}>Decrement</button>
 <button on:click={customStore.reset}>Reset</button>
+
+<style>
+	h1 {
+		animation: fadeIn 3s;
+	}
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+</style>
