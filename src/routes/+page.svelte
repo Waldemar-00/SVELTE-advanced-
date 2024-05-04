@@ -38,8 +38,9 @@
 	// import OnDestroy from '../components/OnDestroy.svelte';
 	// import ElizaBot from '../components/ElizaBot.svelte';
 	// import Tick_2 from '../components/Tick_2.svelte';
-	import Counter from '../components/withStore/Counter.svelte';
-	import Time from '../components/withStore/Time.svelte';
+	// import Counter from '../components/withStore/Counter.svelte';
+	// import Time from '../components/withStore/Time.svelte';
+	import InnerHTML from '../components/InnerHTML.svelte';
 </script>
 
 <h1>Advanced Svelte!</h1>
@@ -70,5 +71,6 @@
 <!-- <OnDestroy /> -->
 <!-- <ElizaBot /> -->
 <!-- <Tick_2 /> -->
-<Counter />
-<Time />
+<!-- <Counter />
+<Time /> -->
+<InnerHTML />

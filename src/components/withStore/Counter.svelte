@@ -13,6 +13,7 @@
 		console.log(derivedStore);
 	}
 	let changedCounter;
+	/** @param {MouseEvent} event */
 	const unsubscribe = counter.subscribe((c) => {
 		changedCounter = c * 2;
 	});
