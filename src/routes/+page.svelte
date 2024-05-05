@@ -41,7 +41,8 @@
 	// import Counter from '../components/withStore/Counter.svelte';
 	// import Time from '../components/withStore/Time.svelte';
 	// import InnerHTML from '../components/InnerHTML.svelte';
-	import Action from '../components/actions/Action.svelte';
+	// import Action from '../components/actions/Action.svelte';
+	import Tweened from '../components/transitions/Tweened.svelte';
 </script>
 
 <h1>Advanced Svelte!</h1>
@@ -75,4 +76,5 @@
 <!-- <Counter />
 <Time /> -->
 <!-- <InnerHTML /> -->
-<Action />
+<!-- <Action /> -->
+<Tweened />
