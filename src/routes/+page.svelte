@@ -43,6 +43,7 @@
 	// import InnerHTML from '../components/InnerHTML.svelte';
 	// import Action from '../components/actions/Action.svelte';
 	import Tweened from '../components/transitions/Tweened.svelte';
+	import Spring from '../components/transitions/Spring.svelte';
 </script>
 
 <h1>Advanced Svelte!</h1>
@@ -78,3 +79,4 @@
 <!-- <InnerHTML /> -->
 <!-- <Action /> -->
 <Tweened />
+<Spring />

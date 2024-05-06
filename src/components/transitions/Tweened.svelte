@@ -9,6 +9,7 @@
 		easing: cubicInOut,
 		delay: 300
 	});
+	console.log(transition);
 	const colors = ['red', 'green', 'blue', 'brown', 'orange'];
 	const toggleColors = tweened(colors[0], {
 		duration: 1000,
