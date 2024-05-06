@@ -2,7 +2,7 @@
 	// @ts-nocheck
 
 	import { spring } from 'svelte/motion';
-	let coords = spring({ x: 50, y: 50 });
+	let coords = spring({ x: 50, y: 50 }, { stiffness: 0.1, damping: 1 });
 	let r = spring(10);
 </script>
 
@@ -27,5 +27,9 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+	}
+	circle {
+		fill: coral;
+		stroke: crimson;
 	}
 </style>
