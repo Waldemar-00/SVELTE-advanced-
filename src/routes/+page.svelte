@@ -1,6 +1,8 @@
 <script>
 	// @ts-nocheck
 
+	import InAndOut from '../components/transitions/InAndOutTr.svelte';
+
 	// import Progress from '../components/Progress.svelte';
 	// import Position from '../components/Position.svelte';
 	// import Form from '../components/Form.svelte';
@@ -42,8 +44,12 @@
 	// import Time from '../components/withStore/Time.svelte';
 	// import InnerHTML from '../components/InnerHTML.svelte';
 	// import Action from '../components/actions/Action.svelte';
-	import Tweened from '../components/motion/Tweened.svelte';
-	import Spring from '../components/motion/Spring.svelte';
+
+	// import Tweened from '../components/motion/Tweened.svelte';
+	// import Spring from '../components/motion/Spring.svelte';
+	// import Fade from '../components/transitions/Fade.svelte';
+	// import Fly from '../components/transitions/Fly.svelte';
+	import InAndOutTr from '../components/transitions/InAndOutTr.svelte';
 </script>
 
 <h1>Advanced Svelte!</h1>
@@ -78,5 +84,10 @@
 <Time /> -->
 <!-- <InnerHTML /> -->
 <!-- <Action /> -->
-<Tweened />
-<Spring />
+
+<!-- <Tweened />
+<Spring /> -->
+<!-- <Fade />
+<hr />
+<Fly /> -->
+<InAndOutTr />
