@@ -19,6 +19,28 @@
 >
 	<circle cx={$coords.x} cy={$coords.y} r={$r} stroke="red" fill="orange" />
 </svg>
+<div class="controls">
+	<label for="stiffness">stiffness</label>
+	<input
+		type="range"
+		id="stiffness"
+		name="stiffness"
+		min="0.1"
+		max="1"
+		step="0.1"
+		bind:value={coords.stiffness}
+	/>
+	<label for="damping">damping</label>
+	<input
+		type="range"
+		id="damping"
+		name="damping"
+		min="0.1"
+		max="1"
+		step="0.1"
+		bind:value={coords.damping}
+	/>
+</div>
 
 <style>
 	svg {
@@ -31,5 +53,15 @@
 	circle {
 		fill: coral;
 		stroke: crimson;
+	}
+	.controls {
+		display: flex;
+		flex-flow: column;
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+	.controls input {
+		margin-bottom: 1rem;
 	}
 </style>
