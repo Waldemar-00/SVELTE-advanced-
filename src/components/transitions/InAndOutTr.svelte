@@ -6,7 +6,10 @@
 <label for="visible"></label>
 <input type="checkbox" id="visible" name="visible" bind:checked={visible} />
 {#if visible}
-	<p in:fly={{ x: 100, y: 100, duration: 1000, delay: 200 }} out:fade>
+	<p
+		in:fly={{ x: 100, y: 100, duration: 1000, delay: 200 }}
+		out:fade={{ duration: 1000, delay: 700 }}
+	>
 		Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id alias, minus hic iste quae enim
 		laboriosam. Quaerat enim repellendus officiis fugiat, inventore necessitatibus expedita
 		asperiores ex reiciendis eligendi, quod ea. Porro ipsum aliquam laboriosam voluptate commodi cum
