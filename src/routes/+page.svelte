@@ -49,9 +49,10 @@
 	// import Spring from '../components/motion/Spring.svelte';
 	// import Fade from '../components/transitions/Fade.svelte';
 	// import Fly from '../components/transitions/Fly.svelte';
-	import InAndOutTr from '../components/transitions/InAndOutTr.svelte';
-	import CustomTransitions from '../components/transitions/CustomTransitions.svelte';
-	import TypeWriter from '../components/transitions/TypeWriter.svelte';
+	// import InAndOutTr from '../components/transitions/InAndOutTr.svelte';
+	// import CustomTransitions from '../components/transitions/CustomTransitions.svelte';
+	// import TypeWriter from '../components/transitions/TypeWriter.svelte';
+	import Spin from '../components/transitions/Spin.svelte';
 </script>
 
 <h1>Advanced Svelte!</h1>
@@ -92,6 +93,7 @@
 <!-- <Fade />
 <hr />
 <Fly /> -->
-<InAndOutTr />
+<!-- <InAndOutTr />
 <CustomTransitions />
-<TypeWriter />
+<TypeWriter /> -->
+<Spin />
