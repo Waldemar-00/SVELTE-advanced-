@@ -3,13 +3,12 @@
 	import { fade } from 'svelte/transition';
 	import { elasticOut } from 'svelte/easing';
 	let visible = true;
+	let status = 'waiting...';
 	function spin(node, { duration }) {
 		return {
 			duration,
 			css(t) {
 				const ease = elasticOut(t);
-				console.log(t);
-
 				return `
           transform: scale(${ease}) rotate(${ease * 1800}deg);
           color: hsl(
@@ -22,16 +21,17 @@
 	}
 </script>
 
+<h3>{status}</h3>
 <label for="visible">visible</label>
 <input type="checkbox" id="visible" name="visible" bind:checked={visible} />
 {#if visible}
 	<div
 		in:spin={{ duration: 8000 }}
 		out:fade={{ duration: 700, delay: 200 }}
-		on:introstart={() => console.log('introstart')}
-		on:introend={() => console.log('introend')}
-		on:outrostart={() => console.log('outrostart')}
-		on:outroend={() => console.log('outroend')}
+		on:introstart={() => (status = 'introstart')}
+		on:introend={() => (status = 'introend')}
+		on:outrostart={() => (status = 'outrostart')}
+		on:outroend={() => (status = 'outroend')}
 	>
 		<span>Transition</span>
 	</div>
