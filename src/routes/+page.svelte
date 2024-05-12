@@ -1,7 +1,7 @@
 <script>
 	// @ts-nocheck
 
-	import InAndOut from '../components/transitions/InAndOutTr.svelte';
+	// import InAndOut from '../components/transitions/InAndOutTr.svelte';
 
 	// import Progress from '../components/Progress.svelte';
 	// import Position from '../components/Position.svelte';
@@ -51,9 +51,11 @@
 	// import Fly from '../components/transitions/Fly.svelte';
 	// import InAndOutTr from '../components/transitions/InAndOutTr.svelte';
 	// import CustomTransitions from '../components/transitions/CustomTransitions.svelte';
-	import TypeWriter from '../components/transitions/TypeWriter.svelte';
+	// import TypeWriter from '../components/transitions/TypeWriter.svelte';
 	// import Spin from '../components/transitions/Spin.svelte';
 	// import Slide from '../components/transitions/Slide.svelte';
+
+	import CrossFade from '../components/transitions/doto-done/CrossFade.svelte';
 </script>
 
 <h1>Advanced Svelte!</h1>
@@ -96,6 +98,7 @@
 <Fly /> -->
 <!-- <InAndOutTr />
 <CustomTransitions /> -->
-<TypeWriter />
+<!-- <TypeWriter /> -->
 <!-- <Spin /> -->
 <!-- <Slide /> -->
+<CrossFade />
