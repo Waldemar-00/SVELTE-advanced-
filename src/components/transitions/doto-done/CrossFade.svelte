@@ -1,6 +1,9 @@
 <script>
 	// @ts-nocheck
+
+	import { crossfade } from 'svelte/transition';
 	import { v4 } from 'uuid';
+	const [send, recieve] = crossfade({ duration: 1000, delay: 200 });
 	let text = '';
 	let todos = [
 		{ do: 'Do the dishes', id: v4(), done: true },
@@ -41,7 +44,7 @@
 	<div>
 		<h2>TODO</h2>
 		{#each todos.filter((t) => !t.done) as t (t.id)}
-			<label>
+			<label out:send in:recieve>
 				<input type="checkbox" on:click={() => checked(t.id)} />
 				{t.do}
 				<button on:click={() => deleteNote(t.id)}></button>
@@ -51,8 +54,8 @@
 	<div>
 		<h2>DONE</h2>
 		{#each todos.filter((t) => t.done) as t (t.id)}
-			<label>
-				<input type="checkbox" on:click={() => checked(t.id)} />
+			<label out:send in:recieve>
+				<input type="checkbox" bind:checked={t.done} on:click={() => checked(t.id)} />
 				{t.do}
 				<button on:click={() => deleteNote(t.id)}></button>
 			</label>
@@ -110,5 +113,9 @@
 	label:hover button {
 		cursor: pointer;
 		opacity: 1;
+	}
+	[type='checkbox']:checked {
+		accent-color: black;
+		background-color: #eee;
 	}
 </style>
