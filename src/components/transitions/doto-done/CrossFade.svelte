@@ -1,7 +1,9 @@
 <script>
 	// @ts-nocheck
 
+	import { flip } from 'svelte/animate';
 	import { crossfade } from 'svelte/transition';
+	import { backOut } from 'svelte/easing';
 	import { v4 } from 'uuid';
 	const [send, recieve] = crossfade({ duration: 1000, delay: 200 });
 	let text = '';
@@ -44,20 +46,30 @@
 	<div>
 		<h2>TODO</h2>
 		{#each todos.filter((t) => !t.done) as t (t.id)}
-			<label out:send in:recieve>
+			<label
+				in:recieve={{ key: t.id }}
+				out:send={{ key: t.id }}
+				animate:flip={{ delay: 850, duration: 1050, easing: backOut }}
+				class="todo"
+			>
 				<input type="checkbox" on:click={() => checked(t.id)} />
 				{t.do}
-				<button on:click={() => deleteNote(t.id)}></button>
+				<button on:click={() => deleteNote(t.id)} aria-label="Remove"></button>
 			</label>
 		{/each}
 	</div>
 	<div>
 		<h2>DONE</h2>
 		{#each todos.filter((t) => t.done) as t (t.id)}
-			<label out:send in:recieve>
+			<label
+				in:recieve={{ key: t.id }}
+				out:send={{ key: t.id }}
+				animate:flip={{ delay: 850, duration: 1050, easing: backOut }}
+				class="done"
+			>
 				<input type="checkbox" bind:checked={t.done} on:click={() => checked(t.id)} />
 				{t.do}
-				<button on:click={() => deleteNote(t.id)}></button>
+				<button on:click={() => deleteNote(t.id)} aria-label="Remove"></button>
 			</label>
 		{/each}
 	</div>
@@ -116,6 +128,8 @@
 	}
 	[type='checkbox']:checked {
 		accent-color: black;
+	}
+	.done {
 		background-color: #eee;
 	}
 </style>
