@@ -1,18 +1,21 @@
-<script>
-	function getMessageHandler() {
-		alert('Modifiers - once');
-	}
-</script>
-
 <div>
 	<h3>Wrapper</h3>
-	<button on:click|once={getMessageHandler}>Modifiers</button>
+	<slot>
+		<p>
+			For example you send a fetch, <br />but the fetch failed - you see this block - Fallback slot
+		</p>
+	</slot>
 </div>
 
 <style>
 	div {
 		border: 7px solid red;
 		width: 700px;
-		height: 200px;
+		min-height: 200px;
+		padding: 1rem;
+		margin-bottom: 2rem;
+	}
+	p {
+		font-size: 2rem;
 	}
 </style>
