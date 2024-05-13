@@ -2,7 +2,7 @@
 	// @ts-nocheck
 
 	import { flip } from 'svelte/animate';
-	import { crossfade } from 'svelte/transition';
+	import { crossfade, slide } from 'svelte/transition';
 	import { backOut } from 'svelte/easing';
 	import { v4 } from 'uuid';
 	const [send, recieve] = crossfade({ duration: 1000, delay: 200 });
@@ -52,7 +52,7 @@
 				animate:flip={{ delay: 850, duration: 1050, easing: backOut }}
 				class="todo"
 			>
-				<input type="checkbox" on:click={() => checked(t.id)} />
+				<input type="checkbox" on:click={() => checked(t.id)} transition:slide />
 				{t.do}
 				<button on:click={() => deleteNote(t.id)} aria-label="Remove"></button>
 			</label>
@@ -67,7 +67,12 @@
 				animate:flip={{ delay: 850, duration: 1050, easing: backOut }}
 				class="done"
 			>
-				<input type="checkbox" bind:checked={t.done} on:click={() => checked(t.id)} />
+				<input
+					type="checkbox"
+					bind:checked={t.done}
+					on:click={() => checked(t.id)}
+					transition:slide
+				/>
 				{t.do}
 				<button on:click={() => deleteNote(t.id)} aria-label="Remove"></button>
 			</label>
