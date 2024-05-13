@@ -1,8 +1,6 @@
 <script>
 	// @ts-nocheck
-
 	// import InAndOut from '../components/transitions/InAndOutTr.svelte';
-
 	// import Progress from '../components/Progress.svelte';
 	// import Position from '../components/Position.svelte';
 	// import Form from '../components/Form.svelte';
@@ -14,17 +12,13 @@
 	// import Select from '../components/Select.svelte';
 	// import Todos from '../components/Todos.svelte';
 	// import Video from '../components/Video.svelte';
-
 	// import Dimensions from '../components/Dimensions.svelte';
 	// import Keyboard from '../components/Keyboard.svelte';
-
 	// let password = '*********';
 	// function getPassword(e) {
 	// 	console.log(e);
-
 	// 	password = e.detail.pin;
 	// }
-
 	// import { counter } from '$lib/index';
 	// import { object } from '$lib/index';
 	// let persons = [
@@ -44,7 +38,6 @@
 	// import Time from '../components/withStore/Time.svelte';
 	// import InnerHTML from '../components/InnerHTML.svelte';
 	// import Action from '../components/actions/Action.svelte';
-
 	// import Tweened from '../components/motion/Tweened.svelte';
 	// import Spring from '../components/motion/Spring.svelte';
 	// import Fade from '../components/transitions/Fade.svelte';
@@ -54,8 +47,8 @@
 	// import TypeWriter from '../components/transitions/TypeWriter.svelte';
 	// import Spin from '../components/transitions/Spin.svelte';
 	// import Slide from '../components/transitions/Slide.svelte';
-
-	import CrossFade from '../components/transitions/doto-done/CrossFade.svelte';
+	// import CrossFade from '../components/transitions/doto-done/CrossFade.svelte';
+	import ActionsJS from '../components/actionsJS/ActionsJS.svelte';
 </script>
 
 <h1>Advanced Svelte!</h1>
@@ -101,4 +94,5 @@
 <!-- <TypeWriter /> -->
 <!-- <Spin /> -->
 <!-- <Slide /> -->
-<CrossFade />
+<!-- <CrossFade /> -->
+<ActionsJS />
