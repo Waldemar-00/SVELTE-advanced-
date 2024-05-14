@@ -13,7 +13,6 @@
 		width: 700px;
 		min-height: 200px;
 		padding: 1rem;
-		margin-bottom: 2rem;
 	}
 	p {
 		font-size: 2rem;
