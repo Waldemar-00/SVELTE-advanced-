@@ -49,7 +49,8 @@
 	// import Slide from '../components/transitions/Slide.svelte';
 	// import CrossFade from '../components/transitions/doto-done/CrossFade.svelte';
 	// import ActionsJS from '../components/actionsJS/ActionsJS.svelte';
-	import ActiveCss from '../components/activeCSS/ActiveCSS.svelte';
+	// import ActiveCss from '../components/activeCSS/ActiveCSS.svelte';
+	import Composition from '../components/composition/Compositon.svelte';
 </script>
 
 <h1>Advanced Svelte!</h1>
@@ -96,4 +97,5 @@
 <!-- <Spin /> -->
 <!-- <Slide /> -->
 <!-- <CrossFade /> -->
-<ActiveCss />
+<!-- <ActiveCss /> -->
+<Composition />
