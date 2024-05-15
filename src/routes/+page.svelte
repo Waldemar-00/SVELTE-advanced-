@@ -51,7 +51,8 @@
 	// import ActionsJS from '../components/actionsJS/ActionsJS.svelte';
 	// import ActiveCss from '../components/activeCSS/ActiveCSS.svelte';
 	// import Composition from '../components/composition/Compositon.svelte';
-	import MainFile from '../components/conditionalSlots/MainFile.svelte';
+	// import MainFile from '../components/conditionalSlots/MainFile.svelte';
+	import Modal from '../components/modal/Modal.svelte';
 </script>
 
 <h1>Advanced Svelte!</h1>
@@ -100,4 +101,5 @@
 <!-- <CrossFade /> -->
 <!-- <ActiveCss /> -->
 <!-- <Composition /> -->
-<MainFile />
+<!-- <MainFile /> -->
+<Modal />
