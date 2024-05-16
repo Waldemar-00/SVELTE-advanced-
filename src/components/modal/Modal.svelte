@@ -1,17 +1,20 @@
 <script>
 	// @ts-nocheck
-	function open(e) {
+	let co = false;
+	function open() {
+		co = !co;
 		const dialog = document.querySelector('dialog');
 		dialog.showModal();
 		dialog.addEventListener('click', (e) => {
 			if (!e.target.hasAttribute('paragraph')) {
 				dialog.close();
+				co = !co;
 			}
 		});
 	}
 </script>
 
-<button on:click|self={open}>Open Modal</button>
+<button on:click|self={open} style:color={co ? 'red' : 'inherit'}>Open Modal</button>
 <dialog>
 	<p paragraph>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio architecto alias facilis,

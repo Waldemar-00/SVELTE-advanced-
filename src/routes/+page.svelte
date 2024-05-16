@@ -52,7 +52,8 @@
 	// import ActiveCss from '../components/activeCSS/ActiveCSS.svelte';
 	// import Composition from '../components/composition/Compositon.svelte';
 	// import MainFile from '../components/conditionalSlots/MainFile.svelte';
-	import Modal from '../components/modal/Modal.svelte';
+	// import Modal from '../components/modal/Modal.svelte';
+	import MainBox from '../components/dinamicColors/MainBox.svelte';
 </script>
 
 <h1>Advanced Svelte!</h1>
@@ -102,4 +103,4 @@
 <!-- <ActiveCss /> -->
 <!-- <Composition /> -->
 <!-- <MainFile /> -->
-<Modal />
+<MainBox />
