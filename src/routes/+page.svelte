@@ -54,7 +54,8 @@
 	// import MainFile from '../components/conditionalSlots/MainFile.svelte';
 	// import Modal from '../components/modal/Modal.svelte';
 	// import MainBox from '../components/dinamicColors/MainBox.svelte';
-	import Slots from '../components/slots/Slots.svelte';
+	// import Slots from '../components/slots/Slots.svelte';
+	import DataGetFromSlots from '../components/slots/DataGetFromSlots.svelte';
 </script>
 
 <!-- <h1>Advanced Svelte!</h1> -->
@@ -105,4 +106,5 @@
 <!-- <Composition /> -->
 <!-- <MainFile /> -->
 <!-- <MainBox /> -->
-<Slots />
+<!-- <Slots /> -->
+<DataGetFromSlots />
