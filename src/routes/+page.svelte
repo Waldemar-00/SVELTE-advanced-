@@ -53,10 +53,11 @@
 	// import Composition from '../components/composition/Compositon.svelte';
 	// import MainFile from '../components/conditionalSlots/MainFile.svelte';
 	// import Modal from '../components/modal/Modal.svelte';
-	import MainBox from '../components/dinamicColors/MainBox.svelte';
+	// import MainBox from '../components/dinamicColors/MainBox.svelte';
+	import Slots from '../components/slots/Slots.svelte';
 </script>
 
-<h1>Advanced Svelte!</h1>
+<!-- <h1>Advanced Svelte!</h1> -->
 <!-- <h2>{$counter}</h2>
 <h3>{$object.name}</h3>
 <h3>{$object.age}</h3> -->
@@ -103,4 +104,5 @@
 <!-- <ActiveCss /> -->
 <!-- <Composition /> -->
 <!-- <MainFile /> -->
-<MainBox />
+<!-- <MainBox /> -->
+<Slots />
