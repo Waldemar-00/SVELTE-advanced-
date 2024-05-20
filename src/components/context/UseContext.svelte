@@ -4,7 +4,7 @@
 	import { getContext } from 'svelte';
 
 	const fn = getContext('context').alertContext;
-	let count = getContext('count').count;
+	let { count } = getContext('count');
 </script>
 
 <section>

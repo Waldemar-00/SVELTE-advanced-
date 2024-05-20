@@ -56,7 +56,8 @@
 	// import MainBox from '../components/dinamicColors/MainBox.svelte';
 	// import Slots from '../components/slots/Slots.svelte';
 	// import DataGetFromSlots from '../components/slots/DataGetFromSlots.svelte';
-	import GetContext from '../components/context/CreateContext.svelte';
+	// import GetContext from '../components/context/CreateContext.svelte';
+	import SvelteSelf from '../components/svelteElemets/SvelteSelf.svelte';
 </script>
 
 <!-- <h1>Advanced Svelte!</h1> -->
@@ -109,4 +110,5 @@
 <!-- <MainBox /> -->
 <!-- <Slots /> -->
 <!-- <DataGetFromSlots /> -->
-<GetContext />
+<!-- <GetContext /> -->
+<SvelteSelf />
