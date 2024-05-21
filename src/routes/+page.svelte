@@ -58,7 +58,7 @@
 	// import DataGetFromSlots from '../components/slots/DataGetFromSlots.svelte';
 	// import GetContext from '../components/context/CreateContext.svelte';
 	// import SvelteSelf from '../components/svelteElemets/SvelteSelf.svelte';
-	import SvelteElement from '../components/svelteElemets/SvelteComponent.svelte';
+	import SvelteElement from '../components/svelteElemets/SvelteElement.svelte';
 </script>
 
 <!-- <h1>Advanced Svelte!</h1> -->
