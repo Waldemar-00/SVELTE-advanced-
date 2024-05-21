@@ -58,7 +58,8 @@
 	// import DataGetFromSlots from '../components/slots/DataGetFromSlots.svelte';
 	// import GetContext from '../components/context/CreateContext.svelte';
 	// import SvelteSelf from '../components/svelteElemets/SvelteSelf.svelte';
-	import SvelteWindow from '../components/svelteElemets/SvelteWindow.svelte';
+	// import SvelteWindow from '../components/svelteElemets/SvelteWindow.svelte';
+	import SvelteWindowBindings from '../components/svelteElemets/SvelteWindowBindings.svelte';
 </script>
 
 <!-- <h1>Advanced Svelte!</h1> -->
@@ -113,4 +114,5 @@
 <!-- <DataGetFromSlots /> -->
 <!-- <GetContext /> -->
 <!-- <SvelteSelf /> -->
-<SvelteWindow />
+<!-- <SvelteWindow /> -->
+<SvelteWindowBindings />
