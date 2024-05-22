@@ -4,6 +4,7 @@
 	let key = '';
 	let keyCode = '';
 	let color = '#EEEEEE';
+	let left = '-50vmin';
 	function getKey(e) {
 		if (e.key === ' ') key = 'Space';
 		else key = e.key;
@@ -17,7 +18,7 @@
 <svelte:window on:keydown={getKey} on:click={getKey} />
 
 {#if key}
-	<div>
+	<div class="main">
 		<h2>{key}</h2>
 	</div>
 	<h3>{keyCode}</h3>
@@ -25,6 +26,14 @@
 <div class="btn" style:background-color={color}>
 	<button on:click={getKey} tabindex="-1">Ckilc me!</button>
 </div>
+
+<img
+	style:left
+	src="https://i1.wallbox.ru/wallpapers/main/201619/1c99bca33de8dae.jpg"
+	alt="kitty"
+	class="kitty"
+/>
+<svelte:body on:mouseenter={() => (left = 0)} on:mouseleave={() => (left = '-50vmin')} />
 
 <style>
 	div {
@@ -51,5 +60,11 @@
 	}
 	.btn {
 		padding: 15rem;
+	}
+	.kitty {
+		position: absolute;
+		top: 170px;
+		width: 50vmin;
+		transition: all 0.7s ease-in-out;
 	}
 </style>

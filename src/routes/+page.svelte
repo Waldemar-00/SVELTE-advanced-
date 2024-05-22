@@ -59,7 +59,7 @@
 	// import GetContext from '../components/context/CreateContext.svelte';
 	// import SvelteSelf from '../components/svelteElemets/SvelteSelf.svelte';
 	// import SvelteWindow from '../components/svelteElemets/SvelteWindow.svelte';
-	import SvelteWindowBindings from '../components/svelteElemets/SvelteWindowBindings.svelte';
+	import SvelteElement from '../components/svelteElemets/SvelteElement.svelte';
 </script>
 
 <!-- <h1>Advanced Svelte!</h1> -->
@@ -115,4 +115,4 @@
 <!-- <GetContext /> -->
 <!-- <SvelteSelf /> -->
 <!-- <SvelteWindow /> -->
-<SvelteWindowBindings />
+<SvelteElement />
