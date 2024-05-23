@@ -5,6 +5,8 @@
 	import { crossfade, slide } from 'svelte/transition';
 	import { backOut } from 'svelte/easing';
 	import { v4 } from 'uuid';
+	import { afterUpdate } from 'svelte';
+	import flash from '$lib/flash.js';
 	const [send, recieve] = crossfade({ duration: 1000, delay: 200 });
 	let text = '';
 	let todos = [
@@ -29,6 +31,10 @@
 		const filteredTodos = todos.filter((t) => t.id !== id);
 		todos = [...filteredTodos];
 	}
+	let element;
+	afterUpdate(() => {
+		flash(element);
+	});
 </script>
 
 <label for="enter">
@@ -51,6 +57,7 @@
 				out:send={{ key: t.id }}
 				animate:flip={{ delay: 850, duration: 1050, easing: backOut }}
 				class="todo"
+				bind:this={element}
 			>
 				<input type="checkbox" on:click={() => checked(t.id)} transition:slide />
 				{t.do}
@@ -66,6 +73,7 @@
 				out:send={{ key: t.id }}
 				animate:flip={{ delay: 850, duration: 1050, easing: backOut }}
 				class="done"
+				bind:this={element}
 			>
 				<input
 					type="checkbox"
@@ -108,7 +116,6 @@
 		display: flex;
 		gap: 0.5rem;
 		padding: 1rem;
-		border: 1 solid grey;
 		background-color: rgb(225, 225, 225);
 		padding-right: 3rem;
 	}
