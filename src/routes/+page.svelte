@@ -47,7 +47,7 @@
 	// import TypeWriter from '../components/transitions/TypeWriter.svelte';
 	// import Spin from '../components/transitions/Spin.svelte';
 	// import Slide from '../components/transitions/Slide.svelte';
-	import CrossFade from '../components/transitions/doto-done/CrossFade.svelte';
+	// import CrossFade from '../components/transitions/doto-done/CrossFade.svelte';
 	// import ActionsJS from '../components/actionsJS/ActionsJS.svelte';
 	// import ActiveCss from '../components/activeCSS/ActiveCSS.svelte';
 	// import Composition from '../components/composition/Compositon.svelte';
@@ -60,6 +60,7 @@
 	// import SvelteSelf from '../components/svelteElemets/SvelteSelf.svelte';
 	// import SvelteWindow from '../components/svelteElemets/SvelteWindow.svelte';
 	// import SvelteElement from '../components/svelteElemets/SvelteElement.svelte';
+	import SvelteOptions from '../components/SvelteOptions.svelte';
 </script>
 
 <!-- <h1>Advanced Svelte!</h1> -->
@@ -105,7 +106,7 @@
 <!-- <TypeWriter /> -->
 <!-- <Spin /> -->
 <!-- <Slide /> -->
-<CrossFade />
+<!-- <CrossFade /> -->
 <!-- <ActiveCss /> -->
 <!-- <Composition /> -->
 <!-- <MainFile /> -->
@@ -116,3 +117,4 @@
 <!-- <SvelteSelf /> -->
 <!-- <SvelteWindow /> -->
 <!-- <SvelteElement /> -->
+<SvelteOptions />
