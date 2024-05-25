@@ -8,17 +8,8 @@
 		{ done: false, text: 'Build an app', id: v4() },
 		{ done: false, text: 'Corld domination', id: v4() }
 	];
-	function toggleCheckbox(todo) {
-		todos = todos.map((t) => {
-			if (t === todo) {
-				return {
-					done: !t.done,
-					text: t.text,
-					id: t.id
-				};
-			}
-			return t;
-		});
+	function toggleCheckbox(id) {
+		todos = todos.map((t) => (t.id === id ? { ...t, done: !t.done } : t));
 	}
 </script>
 
@@ -26,7 +17,7 @@
 	<h1>TODO</h1>
 	<ul>
 		{#each todos as todo (todo.id)}
-			<Todo {todo} on:change={() => toggleCheckbox(todo)} />
+			<Todo {todo} on:change={() => toggleCheckbox(todo.id)} />
 		{/each}
 	</ul>
 </div>
