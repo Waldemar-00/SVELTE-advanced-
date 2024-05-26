@@ -60,7 +60,8 @@
 	// import SvelteSelf from '../components/svelteElemets/SvelteSelf.svelte';
 	// import SvelteWindow from '../components/svelteElemets/SvelteWindow.svelte';
 	// import SvelteElement from '../components/svelteElemets/SvelteElement.svelte';
-	import SvelteOptions from '../components/SvelteOptions.svelte';
+	// import SvelteOptions from '../components/SvelteOptions.svelte';
+	import TicTacToe from '../components/tic-tac-toe/TicTacToe.svelte';
 </script>
 
 <!-- <h1>Advanced Svelte!</h1> -->
@@ -117,4 +118,5 @@
 <!-- <SvelteSelf /> -->
 <!-- <SvelteWindow /> -->
 <!-- <SvelteElement /> -->
-<SvelteOptions />
+<!-- <SvelteOptions /> -->
+<TicTacToe />
