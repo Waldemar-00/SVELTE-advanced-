@@ -13,7 +13,7 @@
 		border: 5px solid purple;
 		width: 50vmin;
 		height: 50vmin;
-		margin: 5rem auto;
+		margin: 0 auto;
 		background-color: purple;
 	}
 </style>

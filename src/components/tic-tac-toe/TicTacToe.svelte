@@ -35,7 +35,7 @@
 	h1 {
 		width: 70vmin;
 		text-align: center;
-		margin: 2rem auto;
+		margin: calc(1.2rem + 3vmin) auto;
 		color: rgb(211, 9, 211);
 		font-size: calc(1.2rem + 2vmin);
 	}
@@ -47,7 +47,7 @@
 	}
 	.reset {
 		display: block;
-		margin: 0.5rem auto;
+		margin: calc(1.2rem + 3vmin) auto;
 		padding: calc(0.3rem + 0.5vmin) 1rem;
 		background-color: red;
 		color: #fff;
