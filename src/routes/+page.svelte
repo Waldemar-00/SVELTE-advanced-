@@ -61,7 +61,8 @@
 	// import SvelteWindow from '../components/svelteElemets/SvelteWindow.svelte';
 	// import SvelteElement from '../components/svelteElemets/SvelteElement.svelte';
 	// import SvelteOptions from '../components/SvelteOptions.svelte';
-	import TicTacToe from '../components/tic-tac-toe/TicTacToe.svelte';
+	import AudioPlayer from '../components/player/AudioPlayer.svelte';
+	// import TicTacToe from '../components/tic-tac-toe/TicTacToe.svelte';
 </script>
 
 <!-- <h1>Advanced Svelte!</h1> -->
@@ -119,4 +120,5 @@
 <!-- <SvelteWindow /> -->
 <!-- <SvelteElement /> -->
 <!-- <SvelteOptions /> -->
-<TicTacToe />
+<!-- <TicTacToe /> -->
+<AudioPlayer />
