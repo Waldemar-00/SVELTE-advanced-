@@ -61,8 +61,8 @@
 	// import SvelteWindow from '../components/svelteElemets/SvelteWindow.svelte';
 	// import SvelteElement from '../components/svelteElemets/SvelteElement.svelte';
 	// import SvelteOptions from '../components/SvelteOptions.svelte';
-	import Stores from '../components/allStores/Stores.svelte';
-	// import Debug from '../components/debug/Debug.svelte';
+	// import Stores from '../components/allStores/Stores.svelte';
+	import Debug from '../components/debug/Debug.svelte';
 	// import AudioPlayer from '../components/player/AudioPlayer.svelte';
 	// import TicTacToe from '../components/tic-tac-toe/TicTacToe.svelte';
 </script>
@@ -124,5 +124,5 @@
 <!-- <SvelteOptions /> -->
 <!-- <TicTacToe /> -->
 <!-- <AudioPlayer /> -->
-<!-- <Debug /> -->
-<Stores />
+<Debug />
+<!-- <Stores /> -->
